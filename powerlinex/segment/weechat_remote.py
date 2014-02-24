@@ -445,15 +445,15 @@ class Hotlist(threaded.KwThreadedSegment):
                                                 'msg': 'M:{count}',
                                                 'prv': 'P:{count}',
                                                 'hl': 'H:{count}'})
-            use_space_as_divider = kwargs.get('use_space_as_divider', False)
-            draw_inner_divider = not use_space_as_divider
+            space_divider = kwargs.get('space_divider', False)
+            draw_inner_divider = not space_divider
 
             if state.get(FMT_SUMMARY):
                 for p, count in state[FMT_SUMMARY].iteritems():
                     contents = fmt[HOTLIST_SUMMARY[p]].format(count=count)
                     groups = ['hotlist_' + HOTLIST_SUMMARY[p]] + default_groups
 
-                    if use_space_as_divider:
+                    if space_divider:
                         contents = contents + ' '
 
                     result.append({'contents': contents,
@@ -461,7 +461,7 @@ class Hotlist(threaded.KwThreadedSegment):
                                    'highlight_group': groups,
                                    'draw_inner_divider': draw_inner_divider})
 
-            if (result and use_space_as_divider and
+            if (result and space_divider and
                     result[-1]['contents'][-1] == ' '):
                 result[-1]['contents'] = result[-1]['contents'][:-1]
 
