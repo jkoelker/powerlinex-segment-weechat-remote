@@ -420,7 +420,8 @@ class Hotlist(threaded.KwThreadedSegment):
 
                 count = count + i[priority]
 
-            content[priority] = count
+            if count:
+                content[priority] = count
 
         if content:
             return content
