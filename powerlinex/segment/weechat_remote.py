@@ -441,16 +441,16 @@ class Hotlist(threaded.KwThreadedSegment):
                                'highlight_group': default_groups})
 
         elif format == FMT_SUMMARY:
-            fmt = kwargs.get('summary_format', {'low': 'L:{count}',
-                                                'msg': 'M:{count}',
-                                                'prv': 'P:{count}',
-                                                'hl': 'H:{count}'})
+            fmt = kwargs.get('summary_format', {})
             space_divider = kwargs.get('space_divider', False)
             draw_inner_divider = not space_divider
 
             if state.get(FMT_SUMMARY):
                 for p, count in state[FMT_SUMMARY].iteritems():
-                    contents = fmt[HOTLIST_SUMMARY[p]].format(count=count)
+                    level = HOTLIST_SUMMARY[p]
+                    content_fmt = fmt.get(level,
+                                          '%s:{count}' % level[0].upper())
+                    contents = content_fmt.format(count=count)
                     groups = ['hotlist_' + HOTLIST_SUMMARY[p]] + default_groups
 
                     if space_divider:
