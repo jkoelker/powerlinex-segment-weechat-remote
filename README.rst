@@ -6,6 +6,17 @@ This segment extension pulls in your hotlist from a remote
 `Powerline <https://github.com/Lokaltog/powerline>`_ statusbar.
 
 
+NOTE
+----
+
+This extension (in its default configuration) will attempt to make an outbound
+ssh connection to a server and keep that connection persistant (i.e. it will
+reconnect after resuming from suspend). As such the use of
+`powerline-daemon <https://github.com/kovidgoyal/powerline-daemon>`_
+is **HIGHLY** recommended. If this module is **NOT** run under powerline-daemon
+the connection will be killed after **EVERY** call to powerline.
+
+
 Examples
 --------
 
