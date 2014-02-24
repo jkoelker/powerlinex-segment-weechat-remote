@@ -6,6 +6,18 @@ This segment extension pulls in your hotlist from a remote
 `Powerline <https://github.com/Lokaltog/powerline>`_ statusbar.
 
 
+Examples
+--------
+
+``count`` format:
+
+.. image:: https://raw.github.com/jkoelker/powerlinex-segment-weechat-remote/master/images/count.png
+
+``summary`` format:
+
+.. image:: https://raw.github.com/jkoelker/powerlinex-segment-weechat-remote/master/images/summary.png
+
+
 Installation
 ------------
 
