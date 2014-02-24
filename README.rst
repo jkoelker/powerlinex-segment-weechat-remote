@@ -15,7 +15,7 @@ On the host running `Powerline <https://github.com/Lokaltog/powerline>`_ run:
 
     pip install git+https://github.com/jkoelker/powerlinex-segment-weechat-remote.git
 
-On the remote `Weechat <http://weechat.org>`_ server first instal the
+On the remote `Weechat <http://weechat.org>`_ server first install the
 hotlist2jsonfile script:
 
 .. code-block:: bash
