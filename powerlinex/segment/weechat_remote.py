@@ -433,7 +433,7 @@ class Hotlist(threaded.KwThreadedSegment):
 
         result = []
         default_groups = ['hotlist', 'email_alert']
-        dividers = ['hotlist:divider', 'background:divider']
+        divider = 'hotlist:divider'
 
         if format == FMT_COUNT:
             if state.get(FMT_COUNT):
@@ -458,7 +458,7 @@ class Hotlist(threaded.KwThreadedSegment):
                         contents = contents + ' '
 
                     result.append({'contents': contents,
-                                   'divider_highlight_group': dividers,
+                                   'divider_highlight_group': divider,
                                    'highlight_group': groups,
                                    'draw_inner_divider': draw_inner_divider})
 

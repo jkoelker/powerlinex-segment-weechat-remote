@@ -251,7 +251,7 @@ The ``summary`` format will also set the divider groups to:
 
 .. code-block:: python
 
-    ['hotlist:divider', 'background:divider']
+    'hotlist:divider'
 
 This allows adding the following ``hotlist:divider`` group to the color scheme
 (e.g. ``$HOME/.config/powerline/colorschemes/tmux/default.json``) which will
